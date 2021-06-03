@@ -11,14 +11,6 @@ const buttonStyles = css`
   }
 `;
 
-const collectionItemButtonStyles = css`
-	width: 80%;
-	position: absolute;
-	top: 255px;
-	opacity: 0.85;
-	display: flex;
-`
-
 const invertedButtonStyles = css`
   background-color: white;
   color: black;
@@ -47,12 +39,6 @@ const getButtonStyles = props => {
 	return props.inverted ? invertedButtonStyles : buttonStyles;
 };
 
-const getButtonColletionItemStyle = props => {
-	if(props.isCollectionItem){
-		return collectionItemButtonStyles
-	}
-}
-
 export const CustomButtonContainer = styled.button`
   min-width: 165px;
   width: auto;
@@ -68,5 +54,4 @@ export const CustomButtonContainer = styled.button`
   display: flex;
   justify-content: center;
   ${getButtonStyles}
-  ${getButtonColletionItemStyle}
 `;
